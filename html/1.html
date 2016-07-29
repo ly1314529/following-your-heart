@@ -5,7 +5,7 @@
   </head> 
   <body> 
   <hl>小新！小新！</hl> 
-  <p title="a gent1e reminder">各种小新美图</p>
+  <p>各种小新美图</p>
   <ul id="lyy"> 
   
   <li> 
@@ -19,12 +19,15 @@
   </li>
   </ul> 
   <img id="ly"  alt="美图">
-
+  <p id='describe' >选择图片</p>
 
  <script> 
   function my(pic) {
    var sorce=pic.getAttribute('href');
    var ly=document.getElementById('ly');
+   var text=pic.getAttribute('title');
+   var describe=document.getElementById('describe');
+   describe.firstChild.nodeValue('text');
    ly.setAttribute('src',sorce);
 }
 
@@ -44,4 +47,12 @@ src 通常用作 "拿取" 而 href 用作 "连结前往"
 就是 src 拿取 image.jpg 作为这个 img 的源档案… 就是 <img> 显示 image.jpg 的意思
 例如 <a href="image.jpg" />
 就是 href 跳转到 image.jpg… 就是网址会跳转到 image.jpg 的意思
+getAttríbute是一个函数。它只有一个参数一一你打算查询的属性的名字:
+object.getAttribute(αttribute) 
+ setAttribute()有点不同:它允许我们对属性节点的 值做出修改。与 getAttribute 一样， setAttri bute 也只能用于元素节点: object. setAttribute(attribute, value) 
 */
+/*
+如果想改变一个文本节点的值，那就使用 DOM 提供的 nodeValue 属性，它用来得到(和设 置)一个节点的值:
+node.nodeValue
+ childNodes 属性可以用来获取任何一个元素的所有子元素，它是一个包含这个节点的全部子元素的数组:
+ 有firstChild和lastChild
