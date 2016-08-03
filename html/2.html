@@ -1,0 +1,58 @@
+<lOOCTYPE html > 
+<html lang="en">
+ <head> <meta charset="utf-8" /> 
+ <title>一个简易计算器</title> 
+  </head> 
+  <body> 
+ <p>做一个属于自己的计算器</p>
+  <input type="text" id="text1" />  
+  <select id="select">
+  	<option value="0">+</option>
+  	<option value="1">-</option>
+  	<option value="2">*</option>
+    <option value="3">/</option>
+  </select>
+  <input type="text" id="text2" />
+  <input type="button" value="=" onclick="my()"/>
+  <input type='text' id="end" /> 
+  <!--布局-->
+  
+    <!--通过 = 按钮来调用创建的函数，得到结果-->  
+ <script> 
+ function my() {
+ 	var a=parseInt(document.getElementById('text1').value);
+ 	var b=parseInt(document.getElementById('text2').value);
+ 	var c=parseInt(document.getElementById('select').value);
+ 	var d=document.getElementById('end').value;
+
+ 	switch(c) {
+ 		case 0: document.getElementById('end').value=add(a,b);break;
+ 		case 1: document.getElementById('end').value=sub(a,b);break;
+ 		case 2: document.getElementById('end').value=cheng(a,b);break;
+ 		case 3: document.getElementById('end').value=chu(a,b);break;
+ 	}
+
+ 	function add(a,b) {
+ 		return a+b;
+ 	}
+ 	function sub(a,b) {
+ 		return a-b;
+   }
+    function cheng(a,b) {
+    	return a*b;
+    }
+    function chu(a,b) {
+    	return a/b;
+    }
+ }
+</script> 
+</body> 
+</html> 
+
+
+<!--id是绑定的值，value是显示出来的值，name是他的名字
+button 是按钮，绑定的是这个my()函数
+首先是布局
+然后是定义my()函数，首先将表单需要运算的值进行转换成数值
+然后定义情况，加减乘除四种运算
+然后每种情况，写出他的算法
