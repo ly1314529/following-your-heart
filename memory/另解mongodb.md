@@ -51,6 +51,7 @@ db.open(function (err,db) {
  collection.update({被操作的数据},{更新的数据}，callback());
   ```
     * findAndModify()
+    
     ```javascript
     collection.findAndModify({被操纵的数据},{修改后的数据},{相关参数},callback());
     ```
@@ -59,4 +60,6 @@ db.open(function (err,db) {
        * [['name',1],['price',-1]]:第一个是升序排列，第二个是降序排列
        * {upsert:true},插入一条数据
   
-  * 
+  * 删除数据
+   
+   collection.remove();//一样的用法
