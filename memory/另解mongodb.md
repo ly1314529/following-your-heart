@@ -31,7 +31,7 @@ db.open(function (err,db) {
  * 关于port报错
  
  在运行的时候，会报错，端口号找不到，这时需要启动mongodb，mongodb --dbpath (mongodb安装路径)
- ,最后一行有端口号信息，是27017,把port换成27017就可以运行了
+ ,最后一行有端口号信息，是27017(因人而异）,把port换成27017就可以运行了
  
  * 查询数据
  ```javascript
