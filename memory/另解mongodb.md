@@ -46,3 +46,17 @@ db.open(function (err,db) {
    }
    });
    ```
+ * 更新数据
+ ```javascript
+ collection.update({被操作的数据},{更新的数据}，callback());
+  ```
+    * findAndModify()
+    ```javascript
+    collection.findAndModify({被操纵的数据},{修改后的数据},{相关参数},callback());
+    ```
+    * 关于相关参数
+       * {multi:true},可以用到$set:{更新的数据},所有的数据都会被改成{更新的数据}
+       * [['name',1],['price',-1]]:第一个是升序排列，第二个是降序排列
+       * {upsert:true},插入一条数据
+  
+  * 
