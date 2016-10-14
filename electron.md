@@ -109,6 +109,20 @@ app.on("activate",function(){
   </body>
   </html>
   ```
+  * 开始进行打包成exe 
+  
+  需要下载 electron-packager
+  ```
+  npm install -g electron-packager  (安装完成)
+  electron-packager /e/node-webkit node --platform=win32 --arch=x64 --icon=/e/node-webkit/a14.icon --overwrite --out /e/dist --version=1.0.0   //打包命令，/e/node-webkit(代表需要打包的路径名，绝对路径，路径不要写错了)  node（app在packag.json中的名字）--platform=win32(打包的平台) --arch=x64（操作系统的位数）--icon=(图标的路径)  --overwrite --out /e/dist（exe打包好后存放的位置） --version=1.0.0 （打包的版本号）
+  
+//Packaging app for platform win32 x64 using electron v1.0.0
+//Wrote new app to E:\dist\node-win32-x64 （输入这个代表打包成功）
+
+
+  ```
+ 
+  
   
   
   今天先更到这里，更多资料参考[资料](https://wangdashuaihenshuai.gitbooks.io/electron-zh-document/content/tutorial/quick-start.html)
