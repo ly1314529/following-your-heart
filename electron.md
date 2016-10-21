@@ -109,7 +109,8 @@ app.on("activate",function(){
   </body>
   </html>
   ```
-  * 开始进行打包成exe 
+ 
+ *  开始进行打包成exe 
   
   需要下载 electron-packager
   
