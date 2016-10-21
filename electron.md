@@ -110,12 +110,12 @@ app.on("activate",function(){
   </html>
   ```
  
- *  开始进行打包成exe 
+ *  开始进行打包成exe  ,需要下载 electron-packager
   
-  需要下载 electron-packager
-  
-  ```
+  
+  ```
   npm install -g electron-packager  (安装完成)
+  
   ```
   
   ```
@@ -126,8 +126,7 @@ app.on("activate",function(){
   ```
 //Packaging app for platform win32 x64 using electron v1.0.0
 //Wrote new app to E:\dist\node-win32-x64 （输入这个代表打包成功）
-```
- 
+ ```
   
   
   
