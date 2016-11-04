@@ -38,3 +38,28 @@ console.log('关闭数据库成功');
 }
 });
 
+
+--------
+
+mysql 基本语句
+
+```
+* mysql -u root(登录名) -p
+* create database samp_db character set gbk;  //创建一个叫sample_db的数据库
+* show databases;  //展示数据库
+* drop database db; //删掉db这个数据库
+* create table students
+	（
+		id int unsigned not null auto_increment primary key,
+		name char(8) not null,
+		sex char(4) not null,
+		age tinyint unsigned not null,
+		tel char(13) null default "-"
+	);  //创建表students
+  
+  
+  * insert into students value("值");  //插入数据
+  * select name,age from students; //查询数据
+  * select * from students where id>2; //条件查询语句
+  * update students set tel='111' where id=3;  //从students表中将id为3的tel改为‘111’
+  * delete from students where id=2;
