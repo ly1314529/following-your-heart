@@ -15,8 +15,10 @@ mysql>show variables like 'port'; //find the port
 mysql>show databases; //展示数据库表
 ```
 * 源码
+   
    * 链接数据库
-   ```javascript
+   
+```javascript
    
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -39,6 +41,7 @@ console.log('关闭数据库成功');
 });
 
 ```
+
 --------
 
 mysql 基本语句
